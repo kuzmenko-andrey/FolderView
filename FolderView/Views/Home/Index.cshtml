@@ -1,0 +1,14 @@
+﻿@model FoldreView.Models.PageView
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>Folder: @Model.Name</h1>
+
+<p>
+    @foreach (var folder in Model.Folders)
+    {
+        <a href="@folder.Url">@folder.Name</a><br>
+    }
+</p>
